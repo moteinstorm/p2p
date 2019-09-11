@@ -38,12 +38,37 @@ public class User  implements Serializable {
 	
 	private String updateIp;
 	
+	private String checkCode;//验证码
+	private String smsCode;//短信验证码
+	private String recommender; // 推荐人
 	
+	
+	
+	
+	public String getCheckCode() {
+		return checkCode;
+	}
+	public void setCheckCode(String checkCode) {
+		this.checkCode = checkCode;
+	}
+	public String getSmsCode() {
+		return smsCode;
+	}
+	public void setSmsCode(String smsCode) {
+		this.smsCode = smsCode;
+	}
+	public String getRecommender() {
+		return recommender;
+	}
+	public void setRecommender(String recommender) {
+		this.recommender = recommender;
+	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + ", mobile=" + mobile + ", recommderId="
-				+ recommderId + ", registerDate=" + registerDate + ", registerIp=" + registerIp + ", updateDate="
-				+ updateDate + ", updateIp=" + updateIp + "]";
+		return "User [id=" + id + ", name=" + name + ", confirmPwd=" + confirmPwd + ", password=" + password
+				+ ", mobile=" + mobile + ", recommderId=" + recommderId + ", registerDate=" + registerDate
+				+ ", registerIp=" + registerIp + ", updateDate=" + updateDate + ", updateIp=" + updateIp
+				+ ", checkCode=" + checkCode + ", smsCode=" + smsCode + ", recommender=" + recommender + "]";
 	}
 	public Integer getId() {
 		return id;
